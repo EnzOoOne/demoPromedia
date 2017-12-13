@@ -6,7 +6,7 @@
 	<title>DemoProject</title>
 </head>
 <body>
-	<h1>DemoProject</h1>
+	<h1 id="main">DemoProject</h1>
 	<div class="workspace">
 		<textarea class="input"></textarea><!--
 		--><div class="result"></div>
