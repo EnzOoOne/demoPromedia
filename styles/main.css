@@ -1,0 +1,21 @@
+.input,.result{
+	display: inline-block;
+	width: 50%;
+	height: 600px;
+	margin: 0px;
+	vertical-align: top;
+	box-sizing: border-box;
+}
+.input{
+	border: none;
+	background: #eeeeee;
+	resize: none;
+}
+.result{
+	padding: 2px;
+	background: #dddddd;
+}
+h1{
+	color: #3f3fad;
+	font-family: sans-serif;
+}
