@@ -23,5 +23,27 @@
 			}
 		}
 	}
+	$posstar = strpos($str, '*');
+	if($posstar !== false){
+		$posdouble = strpos($str, '**');
+		while($posdouble !== false){
+			$possecond = strpos($str, '**', $posdouble+2);
+			if ($possecond !== false){
+				$str = substr_replace($str, "<b>", $posdouble, 2);
+				$str = substr_replace($str, "</b>", $possecond+1, 2);
+			}else{
+				$str = substr_replace($str, "<i></i>", $posdouble, 2);
+			}
+			$posdouble = strpos($str, '**');
+		}
+		$posstar = strpos($str, '*');
+		$possecond = strpos($str, '*', $posstar+1);
+		while($possecond !== false){
+			$str = substr_replace($str, "<i>", $posstar, 1);
+			$str = substr_replace($str, "</i>", $possecond+2, 1);
+			$posstar = strpos($str, '*');
+			$possecond = strpos($str, '*', $posstar+1);
+		}
+	}
 	echo $str;
 ?>
